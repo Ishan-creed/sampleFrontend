@@ -72,7 +72,7 @@ const Register = () => {
       axios.post("https://od-4fyz.onrender.com/auth/signup/", user) // Making POST request to signup endpoint
         .then((res) => {
           alert(res.data.message); // Alerting the response message
-          navigate("/login", { replace: true }); // Navigating to login page
+          navigate("https://sda-ru5j.onrender.com/login", { replace: true }); // Navigating to login page
         })
         .catch((error) => {
           console.error("Error registering:", error); // Logging error if any
