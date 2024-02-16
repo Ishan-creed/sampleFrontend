@@ -46,7 +46,7 @@ const Login = ({ setUserState }) => {
     if (Object.keys(errors).length === 0) {
       // If no errors, proceed with login
       axios
-        .post("https://od-4fyz.onrender.com/auth/login", user) // Making POST request to login endpoint
+        .post("https://adawda.onrender.com/auth/login", user) // Making POST request to login endpoint
         .then((res) => {
           alert(res.data.message); // Alerting the response message
           const userData = res.data.user; // Getting user data from response
