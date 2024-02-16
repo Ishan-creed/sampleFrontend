@@ -20,7 +20,7 @@ function ToDoList({ history }) {
       const myId = userData._id;
       setUserId(myId);
 
-      const url = `http://localhost:5000/todo/retrieve?userId=${userId}`;
+      const url = `https://od-4fyz.onrender.com/todo/retrieve?userId=${userId}`;
 
       // Fetch todos from the server
       fetch(url, {
@@ -68,7 +68,7 @@ function ToDoList({ history }) {
   // Handle addition of new todo
   const handleAddTodo = () => {
     if (inputValue.trim() !== '') {
-      fetch(`http://localhost:5000/todo/count?userId=${userId}`, {
+      fetch(`https://od-4fyz.onrender.com/todo/count?userId=${userId}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -113,7 +113,7 @@ function ToDoList({ history }) {
 
   // Handle deletion of todo
   const handleDeleteTodo = (id) => {
-    fetch(`http://localhost:5000/todo/delete?id=${id}`, {
+    fetch(`https://od-4fyz.onrender.com/todo/delete?id=${id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
@@ -136,7 +136,7 @@ function ToDoList({ history }) {
 
   // Handle update of todo
   const handleUpdateTodo = (id, newText) => {
-    fetch(`http://localhost:5000/todo/update?id=${id}`, {
+    fetch(`https://od-4fyz.onrender.com/todo/update?id=${id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
