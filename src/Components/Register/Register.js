@@ -69,7 +69,7 @@ const Register = () => {
   useEffect(() => {
     if (Object.keys(formErrors).length === 0 && isSubmit) {
       // If no form errors and form is submitted
-      axios.post("http://localhost:5000/auth/signup/", user) // Making POST request to signup endpoint
+      axios.post("https://od-4fyz.onrender.com/auth/signup/", user) // Making POST request to signup endpoint
         .then((res) => {
           alert(res.data.message); // Alerting the response message
           navigate("/login", { replace: true }); // Navigating to login page
